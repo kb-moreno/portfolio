@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap);
+
+:root {
+    --color-primary: #008080;
+    --color-secondary: #004D4D;
+    --color-accent-1: #40E0D0;
+    --color-accent-2: #FF7518;
+    --color-background: #111111;
+    --color-surface: #1B1B1B;
+    --color-text: #F5F5F5;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;   /* 10px */
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background-color: var(--color-background);
+    font-family: Raleway, sans-serif;
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Montserrat, sans-serif;
+
+}
+.intro_line-1 {
+    margin-bottom: 2rem;
+    font-size: 6rem;
+    font-weight: 500;
+}
+.intro_line-1 > span {
+    color: var(--color-accent-1);
+}
+.intro_line-2 {
+    font-size: 4.8rem;
+    font-weight: 300;
+}
+.navigation-bar {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    border-bottom: 4px solid #00000080;
+    background-color: var(--color-surface);
+}
+.navigations {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-family: Montserrat, sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.navigation-item {
+    margin: 0 6rem;
+}
+.navigation-item a {
+    text-decoration: none;
+    color: inherit;
+}
+.section-title {
+    display: block;
+    margin: 0 auto;
+    padding-top: 4rem;
+    font-family: Montserrat, sans-serif;
+    font-size: 5.2rem;
+    font-weight: 700;
+    text-align: center;
+}
+.section-title::before {
+    position: relative;
+    display: block;
+    content: "";
+    margin: 0 auto;
+    width: 90%;
+    border-bottom: 1.8rem solid var(--color-accent-2);
+    left: 3.2rem;
+    top: 6rem;
+    z-index: -1;
+}
+.about, .projects, .contact {
+    display: flex;
+    height: 92vh;
+    flex-direction: column;
+    scroll-margin: 8vh;
+}
+.about > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-grow: 1;
+}
+.about-info {
+    width: 30vw;
+    padding: 2rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color: var(--color-surface);
+    border: 3px dashed var(--color-accent-1);
+    border-radius: 2rem;
+}
+.human {
+    height: 50vh;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+}
